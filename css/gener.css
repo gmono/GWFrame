@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    border-width: 0;
+}
+
+/*标准面板*/
+.plane{
+    border-radius: 3%;
+    box-shadow: 0px 0px 2px 2px rgba(186, 255, 186, 0.51);
+    background-color: rgb(245, 245, 245);
+    border-width: 1px;
+    border-style:solid;
+    border-color: #fff;
+}
+/*这里声明active类*/
+/*每个元素的active都可以不同 具体内容在xxx.active的交集选择器内*/
+.active{}
+
+
+/*悬浮效应按钮*/
+.hoverbutton{
+    box-shadow: 0px 0px 1px 1px rgba(169, 169, 169, 0.41);
+    transition: box-shadow 0.2s linear;
+    border-radius: 3%;
+}
+.hoverbutton:hover{
+    box-shadow: 0px 0px 3px 3px rgba(169, 169, 169, 0.6);
+}
+/*漂浮效果*/
+/*相片效果*/
+.photo{
+    padding: 5px;
+    background-color: white;
+    border:solid #dddddd 1px;
+    box-shadow: 5px 5px 20px 3px rgba(0, 0, 0, 0.2);
+}
+.smallphoto{
+    border:solid white 1px;
+    box-shadow: 0 0 10px 5px rgba(182, 182, 182, 0.37);
+}
+/*输入*/
+.input{
+    border-radius: 5px;
+    border:solid 1px rgba(249, 157, 153, 0.37);
+    background-image: linear-gradient(to bottom, rgba(255, 181, 173, 0.14) 0%, #ffffff 35%, #ffffff 55%, rgba(255, 187, 185, 0.09));
+}
+.input:focus{
+    outline: rgba(255, 182, 179, 0.66) solid 2px;
+}
+input:hover{
+    border:solid 1px rgba(249, 157, 153, 0.8);
+}
+/*滚动逻辑*/
+
+
+/*视口*/
+
+.v-view,.h-view{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+[content="true"]{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+/*content标志是否为‘页面’div*/
+
+/*以下为淡入辅助类*/
+@keyframes wfadein {
+    0%{
+        filter: blur(10px);
+    }
+    50%{
+        filter:blur(2px);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
+.word-fadein{
+    animation: wfadein 0.5s linear forwards;
+}
+.line-fadein{
+    animation: wfadein 1.5s linear forwards;
+}
+
+/*布局辅助*/
+.inldiv{
+    display: inline;
+}
+.blockdiv{
+    display: block;
+}
+.inlbldiv{
+    display: inline-block;
+}
